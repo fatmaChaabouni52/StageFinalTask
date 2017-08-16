@@ -1,0 +1,45 @@
+<div class="text-center" style="padding:50px 0;" [hidden]="hidAuth">
+ <div style="background-color: #D8D8D8; width: 30%; margin-left: 34.5%; box-shadow: 0 15px 20px rgba(0, 0, 0, 3);">
+	<div class="logo"><img src="../assets/images/logo2.png" width="40%" height="20%"></div><hr style="width:40%">
+	<h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Authentification</h3>
+	<hr  style="width:40%">
+	<!-- Main Form -->
+	<div class="login-form-1" >
+		<form id="login-form" class="text-left" (submit)="loginUser($event)">
+			<div class="login-form-main-message"></div>
+			<div class="main-login-form">
+				<div class="login-group">
+					<div class="form-group">
+						<label for="lg_username" class="sr-only">Username</label>
+						<input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+					</div>
+					<div class="form-group">
+						<label for="lg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+					</div>
+					<div class="form-group login-group-checkbox">
+						<input type="checkbox" id="lg_remember" name="lg_remember">
+						<label for="lg_remember">remember</label>
+					</div>
+				</div>
+				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+			</div>
+			<div class="etc-login-form">
+				<p>forgot your password? <a href="#">click here</a></p>
+				<p>new user? <a href="#">create new account</a></p>
+			</div>
+		</form>
+	</div>
+ </div> <br>
+	<!-- end:Main Form -->
+</div>
+
+
+<div class="container"  [hidden]="hiDash" style="margin-top:5%">
+    <h2 style="color:white">Hello {{name}}</h2>
+	<input type="button" value="Logout" (click)="logout()">
+</div>
+
+
+
+		
